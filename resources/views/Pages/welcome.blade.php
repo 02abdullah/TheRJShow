@@ -3,85 +3,162 @@
 @section('title', 'Home')
 
 @section('header')
-<!-- Header -->
-<header style="background-color: #c3073f" class="py-5 mb-5">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-lg-12">
-                <h1 class="display-4 text-dark mt-5 mb-2">The Rhys & James Show</h1>
-                <p class="lead mb-5 text-dark"><strong>Welcome to our website, here you’ll find blogs and exclusive videos regarding University life, as well as insight into the daily life of a student and their personal stories to hopefully help inform you about University and what it has to offer.</strong></p>
+    <!-- Header -->
+    <header style="background-color: #c3073f" class="py-5 mb-5">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-12">
+                    <h1 class="display-4 text-dark mt-5 mb-2">The Rhys & James Show</h1>
+                    <p class="lead mb-5 text-dark"><strong>Welcome to our website, here you’ll find blogs and exclusive
+                            videos regarding University life, as well as insight into the daily life of a student and
+                            their personal stories to hopefully help inform you about University and what it has to
+                            offer.</strong></p>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 @endsection
 
 @section('content')
     <div class="row">
         <div class="col-md-8 mb-5">
-            <h2>What We Do</h2>
+            <h2>Who We Are</h2>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
-            <a class="btn btn-primary btn-lg" href="blog">Our Blog</a>
+            <p>Students come from all over the world, and from different walks of life, to enjoy the University
+                experience. We
+                know that university life can be filled with a lot of highs, but also, a lot of lows. We hope to connect
+                with students
+                with each episode we put out, discussing a variety of topics. By sharing each others' stories, we hope
+                to show that we're
+                all learning how
+                to get through this chapter of our lives.</p>
+            <p>Experience University. <strong>Experience Together.</strong></p>
+            <a class="btn btn-primary btn-lg" href="/posts">Check out our community!</a>
         </div>
         <div class="col-md-4 mb-5">
             <h2>Contact Us</h2>
             <hr>
             <address>
-                <strong>The RJ Show</strong>
-                <br>127  Crown Street
+                The RJ Show
+                <br>127 Crown Street
                 <br>LONDON, SW11 9HL
             </address>
             <address>
-                <abbr title="Phone">P:</abbr>
-                 07776 59958
-                <br>
-                <abbr title="Email">E:</abbr>
-                <a href="mailto:therjshow2019@gmail.com">therjshow2019@gmail.com</a>
+                <p><em>Tel: </em>01234 567890
+                    <br>
+                    <em>Email: </em><a href="mailto:therjshow2019@gmail.com">therjshow2019@gmail.com</a>
+                </p>
             </address>
         </div>
     </div>
-    <!-- /.row -->
 
     <div class="row">
-        <div class="col-md-4 mb-5">
-            <div class="card h-100">
-                <img class="card-img-top" src="https://placehold.it/300x200" alt="">
-                <div class="card-body">
-                    <h4 class="card-title">YouTube</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+        <div class="col-md-8 mb-5">
+            <h2>Putting Faces to the Names</h2>
+            <hr>
+            <div class="row">
+                <div class="col-md-6 mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top"
+                             src="https://lh3.googleusercontent.com/fq7WyEiY3deKYp4PnpNjsFVf2hWkhrygw1jRypxVAF4JSXSUjEFvSEGyyZbWkYVcyehL1I9TlHOEdz_5v0rz6AI-WhEM1xmmYZNnwrmCpQQKJGCsxEXXg8JRg1EyiLsvcaapjgdhrDZM2Ynt5ZWcsivJGYKtRzsYq15XdWCSVx-tezoktyqGIbjOYDE1R0urbnD-jvF1hdtWfr2tpmHkQrDVgHdROnaGDxM3NOdiPB29POH3FcFZI7gvFrxiaIRWra5qcc26I7vjFe5PIusovlgEc-EZVDuipnF-X4vbYTcdHi145csL7BbhWkx4Pn0v72CUcUhLv33UPOUyv_taWGrMzyuy2cPuqe_AcYzrlQ7VG6V7vGaa8cYSCkMqScFJSVoCHH9tlVn9MMUmBYIQ6vfxbiUWC7tU3Y-OHHR7OAbo21uXy46bdBca8VyPVA_yfIeO1xIc5UCIW-o8Te7-S5IUk8-JArQ7UpsbaBiAn6Eupt6N7NzAUCWQNV6PR_IEgIgJqEhffZqamhWTriP8EJ2biHPs_T_T1j3iGmJjYW26DySbwKYtdTUMkZ39QWyMeCV-HKDZ0nvfOOF05pOQYUBPjAgkshaqtT3gplUIUoARl6ibZI247dMomULC5IX3BBo-xfCPbSR1bCIrGIkjfFj-8Z087gDU4MbzFKZ4l28LmHnqpg0HtUjX_ul5Cw=s777-no?authuser=0"
+                             width="200px" height="400px" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Rhys Khan</h4>
+                            <p class="lead">Host</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                est laborum.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <a href="https://m.youtube.com/channel/UCNpZoy0ZhftWVx4t5oifPhw" target="_blank" class="btn btn-primary">Take Me There!</a>
+                <div class="col-md-6 mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top"
+                             src="https://lh3.googleusercontent.com/jABEGZxo3StrpIB1hCEpc_f_Cu33SRkHqYmai5nLxHZDFEO12ZLxkJ3spBBcujax15nLMrPEaA8TaurIVFw-PAeJKFz5jgSWA7yP7BScoMEC129gEKKmChbxKqy0M5c27oG2NXRSjsGt-VLZzM7AyV8k95URpAQCz2wY31uQGE4z-tJ8WLLi-sK5h44AAPhjsRykYKrdrS5ts92Bvl818Ymo1BVT5To_v_iYy_zMGAoZr3_tcrOGOpBaDSUT-H77p0EQ65V1tWKfTPzzB0jviOcz0FUV759cTFTV8SgI799lTG7Uym2FnCt0hpGet6VGQvF-bSFER9gV7I8T7jsQHXoOw3qxqMAF9ga_WWpTMatCLejnFFiSzt3KkE8XeVFeXqOkfaxrkD5lFmgqAty9cG0q32Mk1XkPRwAo4pxe6E0rMN8Chu1W1gJo2LOGvz5-IBCwK7I0HKAGpKUtdm44dzlODqvQ5Vh4CFX8LNvIxxH2FjKmia53hgQP8TmM9_RKDIadYE2R05K5NhvqEXv-PaXLOUeyPJx_JdAIoc7KW46WyotLXYKcedng0ky_vJXsYCrM8UzD0JSAqkLNiuroFaOK6rXrRFcyEohofzCVp_jKPHlqhAsB4QuD-7HZ3QcmQgV8BiAtHzXq-zhW1iwaQjLsLvq5Q3J6o0no1ZrSnFhYuDpyqa4UmX-W37CL4w=w864-h873-no?authuser=0"
+                             width="200px" height="400px" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">James Thomas</h4>
+                            <p class="lead">Host</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                est laborum.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-md-4 mb-5">
-            <div class="card h-100">
-                <img class="card-img-top" src="https://placehold.it/300x200" alt="">
-                <div class="card-body">
-                    <h4 class="card-title">Facebook</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+            <h2>Follow Our Socials</h2>
+            <hr>
+            <div class="row">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://m.youtube.com/channel/UCNpZoy0ZhftWVx4t5oifPhw" target="_blank">
+                                <img class="mx-auto d-block"
+                                     src="https://lh3.googleusercontent.com/RpcF3vlPuuL_ui9q3pikigA9xgWXGkR6dZewmTNgAoW2HH42qgCcziSJaRFN5B1A8LSLfo4VMou43iJC4viCsXNAarsAToEYq3ezAPZiUgPLOYhf07EwWikUsN8PTnxMPcuckvNW6wUnQ6Dihg3RnKYGMcxHbypjIAoavdLXvIpzEStU77UdaBgDHmyeCyG8bDNWNB3bGmOGgk-1EP1Y5toQctIApd1VzSApuhgiVrz3yx7s4xmU3h8cHbGfr-cprT6wEmUsy8toYPAy7QnFH0y9K66FyOd4181MN-_4PFKJIRnXRJsp46I7uyJqveMXoL7ubEb29py2qaKDNFtb5yZkuujwSRzGh60Xtm7vYoJwtyZHSo32vIZnVLagXx__Y2cMqvhqT0RS-lGLRXhwBLnIaInQ9zeJDhFnQRUitAogFXZCFQLPPH9mPY5v9_i1kQcLG_pmC2_xEtXq2H59BL2JgP9RxvNssWGfF2DC86SZKU6IIKwMbRuWDY627kmBLiCGthKKW7pIhL-M5Yph6MLxxuZntatq2iOvf2HySps8pnMplC5KzAEmAV5cBu3EgpW_CZ6o1CeF0XtSgL1CcrNofdW6b6guj7veOjwAvL8OHLs4Xbzg0hSNLqC1Q5wmFHD4kmLXCtOfrdNKX9PUStccz9Ym2tvgs66QECXp5v4K7enZ2U87X_S36cea-g=w200-h300-no?authuser=0"
+                                     alt="" height="150px" width="150px">
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">YouTube</h5>
+                                <p class="card-text">Subscribe to our YouTube so you won't miss an episode!</p>
+                                <a href="https://m.youtube.com/channel/UCNpZoy0ZhftWVx4t5oifPhw" target="_blank"
+                                   class="btn btn-sm btn-primary">Take Me There!</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <a href="https://www.facebook.com/The-Rhys-and-James-Show-101263594602731" target="_blank" class="btn btn-primary">Show Me!</a>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://www.facebook.com/The-Rhys-and-James-Show-101263594602731" target="_blank">
+                                <img class="mx-auto d-block"
+                                     src="https://lh3.googleusercontent.com/l0GO8KtEq6iBEoOPalmSwTMWf-krAwDMRvFK_ZajozwaeV3DX5XrwZuRZOW1ud3YEMxeToKXFRWSO0LTCygOnyVrusLGFVgAlpvO66YGEN4hcLyKdWFIJi-qE298_LNW3WnmSYD_zP-2zU-98eGiVDpZjB8A8RPSLUvOokTB8hU9cJGLPvvLbXUQfDEsbOSTuRkKE4q9H91R3CAl5z7W8ErgJUMrYARDeu67pnFWx8SWWbGrCnT3iIErK-iEArgD42nxeEOhZAp9TS-HwOB4zVIWMAGXmXmALYpWAYR_msBltQn_UhNUMt7RBg-RvbtPiJ4J7wfi0sP_0GY-JEkblci3il2Mr5Z39NEmwr_qLkmmdyybk0XJc3W4t7et9Hxkpsz4zL1Sp3-Xi-kLVpN1_U9h9bNX56lbNpeFxa393k8iqmPJxvO-uJM_y6EgI2Wt36YRSofzT46RS2_hsAF2-8H6hb56iiBEgSOeY5-dIrtEcTndGWbQ6u7I0anelRQ7hvZn_d_DsxdZU6MEp9EfZiyfDNjq-bBHQ9e7oN4Pd0GyGOxzpn7Oyv8qgCs4Ynal2ssQbuPqMBBNWXWIvXvZnZTM2uhp-77Qwtp8d_gJOR4MNmb3l2COKmyHR9BX8RcaTxq1DZ2PvTqkJsVqhEd49OPvPhZA6eqclaZ-PKiaRPY0Ytzv3OcLYl-LGn9fDg=w200-h300-no?authuser=0"
+                                     alt="" height="150px" width="150px">
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Facebook</h5>
+                                <p class="card-text">Give us a Like on Facebook and share the page with your
+                                    friends!</p>
+                                <a href="https://www.facebook.com/The-Rhys-and-James-Show-101263594602731"
+                                   target="_blank"
+                                   class="btn btn-sm btn-primary">Let's Go!</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-5">
-            <div class="card h-100">
-                <img class="card-img-top" src="https://placehold.it/300x200" alt="">
-                <div class="card-body">
-                    <h4 class="card-title">Instagram</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="https://www.instagram.com/rhyskhan16/" class="btn btn-primary" target="_blank">Let Me See!</a>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://www.instagram.com/rhyskhan16/" target="_blank">
+                                <img class="mx-auto d-block"
+                                     src="https://lh3.googleusercontent.com/Vh6fVLMV7-vPS7kzdtltATl_MOzPRuhXKx9jXDb_KSF_1F25PCCIS6QZe38Mtq_cnYEFDAs_qtmgBzXob39Bk0Zwb0irENFGCqmqrdGlCgWZ40UtUsBtnkd_6SGJwtv0SqCO_w44iMe9y83pA-ZDKqz6OFN713lAR54VkO8VNgbNMYMju71DSfhKGpKsi6Ig_xb47ilKnnDEtQcXeDQ7lpr4OX6HfMAaWtaftVYPCL5OvElDfYiiVCTd9juIspBTDyIEkn4Qf_waPJq9hDU-hPXkKfJN4CirCVK8nV74wp9sgjQUEaswWhZOQZjn0q35Jj4Gy16mi4fxfJRk5iScZ2fZwmyYfYPTEeq3SV3Nlky7IHDbTwov7np7ZAAnSCf79C1p4ilAhhsQOwYONCJTo2xQ89f3q7JveIMBcXV2zuZkFUfErxM-OTjthIR58jc72znYkb7x5O3hLAMlZYphjApbmodqB64t7tnQ-oEQWuNVX_ZNnqdc--yBdBtNDEMkCgqDxXaIWR5-COfq0Xnzy82ghKBMYqXySMq78M4EMi8WeJE96IXmLpSP1rXF9kjHc77M3vUud-ZuQTtsubc-GOZiRzC8YrFV8Xg4I6hjB5cnX1zzwVovExYOHuCeio6SSCb69v_sCv-EimngsY41cP9qJszHhylXa2M9qUtoqVIIpC9zouJUaE9YDpgLOw=w200-h300-no?authuser=0"
+                                     alt="" height="150px" width="150px">
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Instagram</h5>
+                                <p class="card-text">Follow us on Instagram to see what we get up to!</p>
+                                <a href="https://www.instagram.com/rhyskhan16/" target="_blank"
+                                   class="btn btn-sm btn-primary">Let Me
+                                    See!</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /.row -->
-    @endsection
+@endsection
 

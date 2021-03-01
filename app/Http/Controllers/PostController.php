@@ -16,7 +16,7 @@ class PostController extends Controller
     public function index()
     {
         //create variable and store all blog posts
-        $posts = Post::all();
+        $posts = Post::orderBy('id','desc')->simplePaginate(3);
 
         //return view and pass in variable
         return view('posts.index')->withPosts($posts);
@@ -52,7 +52,7 @@ class PostController extends Controller
         $post->save();
 
         // redirect to page
-        return redirect()->route('posts.show', $post->id)->with('success','Your blog post was successfully posted!');
+        return redirect()->route('posts.show', $post->id)->with('success','Your amazing post was successfully uploaded!');
     }
 
     /**
@@ -103,7 +103,7 @@ class PostController extends Controller
         $post->save();
 
         //Redirect to posts.show with flash success
-        return redirect()->route('posts.show', $post->id)->with('success','The edit was successfully saved!');
+        return redirect()->route('posts.show', $post->id)->with('success','Your edit was successfully saved!');
     }
 
     /**
@@ -115,5 +115,30 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+        $post = Post::find($id);
+
+        $post->delete();
+
+        return redirect()->route('posts.index')->with('success','The post has been deleted successfully.');
+    }
+
+    public function search(Request $request)
+    {
+
+        //validate search
+        $this->validate($request, array('query' => 'required|max:255'));
+
+        //create variable and find related blog posts
+        $query = $request->get('query');
+
+        $posts = Post::where('title', 'LIKE', '%'.$query.'%')
+            ->orWhere('body', 'LIKE', '%'.$query.'%')
+            ->orderBy('id', 'desc')->simplePaginate(3);
+
+        //return view and pass in variable
+        return view('posts.search')->withPosts($posts);
+
+
+
     }
 }

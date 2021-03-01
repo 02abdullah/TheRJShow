@@ -8,11 +8,12 @@
         <div class="col-md-8" style="padding-top: 10px">
         {!! Form::model($post, array('route' => array('posts.update', $post->id), 'method' => 'PUT')) !!}
         <div class="form-group">
-            <strong>{!! Form::label('title', 'Title:') !!}</strong>
+            <strong>{!! Form::label('title', 'Title:*') !!}</strong>
             {!! Form::text('title', null, array('class'=>'form-control')) !!}
 
-            <strong>{!! Form::label('body', 'Post Body:', array('style' => 'padding-top: 10px')) !!}</strong>
+            <strong>{!! Form::label('body', 'Post Body:*', array('style' => 'padding-top: 10px')) !!}</strong>
             {!! Form::textarea('body', null, array('class'=>'form-control')) !!}
+            <p>* - Required</p>
         </div>
         </div>
 

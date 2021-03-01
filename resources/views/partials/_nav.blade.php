@@ -2,6 +2,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
 
     <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav" style="margin-right: auto">
         <a class="navbar-brand" href="/">
             {{-- Use Google Photos --}}
@@ -14,18 +15,18 @@
             <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item" style="padding-top: 20px">
-            <a class="nav-link" href="videos">Videos</a>
+            <a class="nav-link" href="/videos">Videos</a>
         </li>
         <li class="nav-item" style="padding-top: 20px">
-            <a class="nav-link" href="blog">Blog</a>
+            <a class="nav-link" href="/posts">Blog</a>
         </li>
     </ul>
-    <?php
-    if (!isset($_SESSION['id'])) {
-        echo "<a class='nav-item nav-link' style='margin-left: auto' href='login'><i class='fas fa-sign-in-alt'><span class='nav-text'>&nbsp; Login</span></i></a>";
-    } else {
-        echo "<a class='nav-item nav-link' style='margin-left: auto' href='logout'><i class='fas fa-sign-out-alt'><span class='nav-text'>&nbsp; Logout</span></i></a>";
-    }
-    ?>
+    <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+        </li>
+    </ul>
+    </div>
+
 
 </nav>

@@ -2,7 +2,7 @@
 <html lang="en">
 @include('partials._head')
 
-<body style="padding-top: 100px; background-color: #eeeeee" class="d-flex flex-column min-vh-100 text-dark">
+<body style="background-color: #eeeeee; padding-top: 100px" class="d-flex flex-column min-vh-100 text-dark">
 @include('partials._nav')
 
 @yield('header')
@@ -14,3 +14,4 @@
 </div>
 </body>
 @include('partials._footer')
+</html>
