@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+
 class PagesController extends Controller {
 
     public function getIndex(){
@@ -20,6 +22,11 @@ class PagesController extends Controller {
 //    }
     public function getVideos(){
         return view('Pages/videos');
+    }
+
+    public function getlogout(){
+        Auth::logout();
+        return redirect('Pages/welcome');
     }
 
 

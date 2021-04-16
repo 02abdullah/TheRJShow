@@ -1,11 +1,11 @@
 @extends('main')
 
-@section('title', 'Search Results')
+@section('title', 'Category')
 
 @section('content')
     <div class="row" style="padding-top: 20px">
         <div class="col-md-10">
-            <h1>Search Results</h1>
+            <h1>All Posts Under Category</h1>
         </div>
         <div class="col-md-12">
             <hr>

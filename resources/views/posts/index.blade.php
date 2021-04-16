@@ -44,7 +44,7 @@
                     </div>
                     <div class="card-footer text-muted">
                         Posted on {{ date('M j, Y h:ia', strtotime($post->created_at)) }} by
-                        <a href="#">User</a>
+                        {{$post->user_name}}
                     </div>
                 </div>
         @endforeach
@@ -79,28 +79,29 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-6">
+                            <!--List of categories, with the category_id resolved from URL in routes--!>
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a href="#">Category</a>
+                                    <a href="/posts/category/1">Personal Updates</a>
                                 </li>
                                 <li>
-                                    <a href="#">Category</a>
+                                    <a href="/posts/category/2">Student Life</a>
                                 </li>
                                 <li>
-                                    <a href="#">Category</a>
+                                    <a href="/posts/category/3">Prospective Students</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-lg-6">
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a href="#">Category</a>
+                                    <a href="/posts/category/4">Campus Living</a>
                                 </li>
                                 <li>
-                                    <a href="#">Category</a>
+                                    <a href="/posts/category/5">Module Talk</a>
                                 </li>
                                 <li>
-                                    <a href="#">Category</a>
+                                    <a href="/posts/category/6">Mental Health</a>
                                 </li>
                             </ul>
                         </div>

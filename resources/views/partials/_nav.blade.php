@@ -21,11 +21,19 @@
             <a class="nav-link" href="/posts">Blog</a>
         </li>
     </ul>
-    <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-        </li>
-    </ul>
+        @if (Auth::check())
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('logout') }}">Logout</a>
+            </li>
+        </ul>
+        @else
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="login">Login</a>
+                </li>
+            </ul>
+        @endif
     </div>
 
 

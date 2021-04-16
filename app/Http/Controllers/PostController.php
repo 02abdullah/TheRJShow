@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class PostController extends Controller
@@ -22,6 +24,7 @@ class PostController extends Controller
         return view('posts.index')->withPosts($posts);
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -29,7 +32,13 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        //only registered users can create
+        if (Auth::check()) {
+            $categories = Category::all();
+            return view('posts.create')->withCategories($categories);
+        }else{
+            return redirect('login');
+        }
     }
 
     /**
@@ -42,12 +51,17 @@ class PostController extends Controller
     {
         // validate data
         $this->validate($request, array('title' => 'required|max:255',
-            'body'=> 'required'
+            'body'=> 'required','category_id'=>'integer'
         ));
         //store the data
         $post = new Post;
         $post->title = $request->title;
         $post->body = $request->body;
+        $post->category_id = $request->category_id;
+        $user = Auth::user();
+        $post->user_name = $user->name;
+        $post->user_id = $user->id;
+        $post->user_email = $user->email;
 
         $post->save();
 
@@ -93,11 +107,12 @@ class PostController extends Controller
     {
         //Validate the data
         $this->validate($request, array('title' => 'required|max:255',
-            'body'=> 'required'
+            'body'=> 'required', 'category_id' =>'integer'
         ));
         //Save data to DB
         $post = Post::find($id);
         $post->title = $request->input('title');
+        $post->category_id = $request->input('category_id');
         $post->body = $request->input('body');
 
         $post->save();
@@ -126,11 +141,21 @@ class PostController extends Controller
     {
 
         //validate search
-        $this->validate($request, array('query' => 'required|max:255'));
+        $this->validate($request, array('query' => 'max:255'));
+
+
 
         //create variable and find related blog posts
         $query = $request->get('query');
 
+        //avoid error message when search bar is empty
+        if(empty($query)){
+            //create variable and store all blog posts
+            $posts = Post::orderBy('id','desc')->simplePaginate(3);
+
+            //return view and pass in variable
+            return view('posts.index')->withPosts($posts);
+        }
         $posts = Post::where('title', 'LIKE', '%'.$query.'%')
             ->orWhere('body', 'LIKE', '%'.$query.'%')
             ->orderBy('id', 'desc')->simplePaginate(3);
@@ -138,7 +163,17 @@ class PostController extends Controller
         //return view and pass in variable
         return view('posts.search')->withPosts($posts);
 
+    }
 
+    public function category($category)
+    {
+        //create variable and find related blog posts
+        $cat=$category;
 
+        $posts = Post::where('category_id', '=', $cat)
+            ->orderBy('id', 'desc')->simplePaginate(3);
+
+        //return view and pass in variable
+        return view('posts.categories')->withPosts($posts);
     }
 }
