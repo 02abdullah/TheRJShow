@@ -37,14 +37,6 @@
                     <label class="form-control label-warning text-xs-center">Placeholder Video 3</label>
                 </div>
             </div>
-            <ul class="pagination justify-content-center mb-4">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">&larr; Older</a>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">Newer &rarr;</a>
-                </li>
-            </ul>
         </div>
     </div>
 @endsection

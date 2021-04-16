@@ -36,6 +36,12 @@
                                 {!! Form::submit('Delete', array('class' => 'btn btn-danger btn-block')) !!}
                                 {!! Form::close() !!}
                             </div>
+                        @elseif(Auth::id() == '4')
+                            <div class="col-sm-6">
+                                {!! Form::open(array('route' => array('posts.destroy', $post->id), 'method' => 'DELETE')) !!}
+                                {!! Form::submit('Delete', array('class' => 'btn btn-danger btn-block')) !!}
+                                {!! Form::close() !!}
+                            </div>
                         @endif
                     </div>
                 </div>
