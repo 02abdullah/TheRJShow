@@ -13,7 +13,7 @@
             <br>
 
             <strong>{!! Form::label('category_id', 'Category:') !!}</strong>
-            {!! Form::select('category_id',array('1'=>'Personal Updates', '2'=>'Student Life', '3'=>'Prospective Students', '4'=>'Campus Living','5'=>'Module Talk','6'=>'Mental Health'), null, array('placeholder' => 'Select category')) !!}
+            {!! Form::select('category_id',array('1'=>'Personal Updates', '2'=>'Student Life', '3'=>'Prospective Students', '4'=>'Campus Living','5'=>'Module Talk','6'=>'Mental Health'), '7', array('placeholder' => 'Select category')) !!}
 
             <br>
             <br>

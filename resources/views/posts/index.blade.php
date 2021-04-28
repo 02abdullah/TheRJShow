@@ -47,7 +47,7 @@
                         {{$post->user_name}}
                     </div>
                 </div>
-        @endforeach
+            @endforeach
 
         <!-- Pagination -->
             <div class="text-center" style="padding-bottom: 25px">
@@ -62,7 +62,7 @@
 
             <!-- Search Widget -->
             <div class="card mb-2">
-                <h5 class="card-header">Search</h5>
+                <h3 class="card-header">Search</h3>
                 <div class="card-body">
                     {!! Form::open(['route' => ['posts.search'],'method' => 'GET']) !!}
 
@@ -75,11 +75,11 @@
 
             <!-- Categories Widget -->
             <div class="card my-4">
-                <h5 class="card-header">Categories</h5>
+                <h3 class="card-header">Categories</h3>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-6">
-                            <!--List of categories, with the category_id resolved from URL in routes--!>
+                            <!--List of categories, with the category_id resolved from URL in routes-->
                             <ul class="list-unstyled mb-0">
                                 <li>
                                     <a href="/posts/category/1">Personal Updates</a>
@@ -95,7 +95,7 @@
                         <div class="col-lg-6">
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a href="/posts/category/4">Campus Living</a>
+                                    <a href="/posts/category/4">Student Accommodation</a>
                                 </li>
                                 <li>
                                     <a href="/posts/category/5">Module Talk</a>
@@ -109,47 +109,18 @@
                 </div>
             </div>
 
-            <!-- Side Widget -->
+            <!-- Trending Widget -->
             <div class="card my-4">
-                <h3 class="card-header">Daily Poll</h3>
+                <h3 class="card-header">Trending Posts</h3>
                 <div class="card-body">
-                    <h5 class="card-header"><span class="fa fa-line-chart"></span>Test Poll</h5>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value=""> Excellent
-                                </label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value=""> Good
-                                </label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value=""> Satisfactory
-                                </label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value=""> Needs Improvement
-                                </label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value=""> Poor
-                                </label>
-                            </div>
-                        </li>
+                    <ul class="list-unstyled mb-0">
+                        @foreach($trending as $post)
+                            <li>
+                                <a href="{{ route('posts.show', $post->id) }}">{{ substr($post->title, 0, 45) }}{{ strlen($post->title) > 45 ? "..." : "" }}</a>
+                                <p><small>By: {{$post->user_name}} ({{$post->view_count}} views)</small></p>
+                            </li>
+                            <hr>
+                        @endforeach
                     </ul>
                 </div>
             </div>

@@ -15,17 +15,16 @@
                 <br>
 
                 <strong>{!! Form::label('url', 'YouTube embed URL:*') !!}</strong>
-                {!! Form::text('url', null, array('class'=>'form-control')) !!}
-                <br>
+                {!! Form::textarea('url', null, array('class'=>'form-control')) !!}
 
-                <p>* - Required</p>
+                <p>Have you read the instructions on how to properly add the URL?</p>
                 {!! Form::submit('Add Video', array('class'=>'btn btn-success')) !!}
                 <a class="btn btn-danger" href="/posts">Cancel</a>
             </div>
             {!! Form::close() !!}
 
             <br>
-            <strong>Tip</strong>
+            <strong>MUST READ</strong>
             <p>To add a video, please go to a YouTube video and select the <strong>'Share'</strong> button underneath the video. Then
                 select <strong>'Embed'</strong>. A new pop-up should appear, click the text on the top right once and copy it. You should
                 then paste this into the URL field above. You will need to find where it says '<strong>src=</strong>', you want the URL
@@ -33,11 +32,12 @@
                 You should now be left with a URL in the field.</p>
             <br>
             <p>For example:</p>
-            <p>&lt;iframe&gt; width="560" height="315" src="<strong>https://www.youtube.com/embed/R6bx7-5lnKY</strong>" title="YouTube
+            <p><code>&lt;iframe&gt; width="560" height="315" src="<strong>https://www.youtube.com/embed/R6bx7-5lnKY</strong>" title="YouTube
                 video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-                gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe&gt;</p>
+                    gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe&gt;</code></p>
             <p>You should be left with:</p>
-            <p>https://www.youtube.com/embed/R6bx7-5lnKY</p>
+            <p><code><strong>https://www.youtube.com/embed/R6bx7-5lnKY</strong></code></p>
+            <p>This URL is what should then be pasted in the URL field above.</p>
         </div>
     </div>
 @endsection

@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class PostController extends Controller
@@ -20,8 +21,11 @@ class PostController extends Controller
         //create variable and store all blog posts
         $posts = Post::orderBy('id','desc')->simplePaginate(3);
 
+        //create variable and store top 4 blogs by view count
+        $trending = Post::orderBy('view_count','desc')->take(4)->get();
+
         //return view and pass in variable
-        return view('posts.index')->withPosts($posts);
+        return view('posts.index')->withPosts($posts)->withTrending($trending);
     }
 
 
@@ -32,10 +36,13 @@ class PostController extends Controller
      */
     public function create()
     {
+        //variable for logged in user
+        $user = Auth::user();
+
         //only registered users can create
         if (Auth::check()) {
             $categories = Category::all();
-            return view('posts.create')->withCategories($categories);
+            return view('posts.create')->withCategories($categories)->withUser($user);
         }else{
             return redirect('login');
         }
@@ -51,12 +58,13 @@ class PostController extends Controller
     {
         // validate data
         $this->validate($request, array('title' => 'required|max:255',
-            'body'=> 'required','category_id'=>'integer'
+            'body'=> 'required','category_id'=>'integer|nullable'
         ));
         //store the data
         $post = new Post;
         $post->title = $request->title;
         $post->body = $request->body;
+        $post->view_count = 0;
         $post->category_id = $request->category_id;
         $user = Auth::user();
         $post->user_name = $user->name;
@@ -78,6 +86,11 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
+
+        //author cannot boost views by clicking their own post
+        if(Auth::id()!=$post->user_id){
+            DB::table('posts')->where('id',$id)->increment('view_count');
+        }
         return view('posts.show')->with('post', $post);
     }
 
@@ -107,7 +120,7 @@ class PostController extends Controller
     {
         //Validate the data
         $this->validate($request, array('title' => 'required|max:255',
-            'body'=> 'required', 'category_id' =>'integer'
+            'body'=> 'required', 'category_id' =>'integer|nullable'
         ));
         //Save data to DB
         $post = Post::find($id);
@@ -143,9 +156,10 @@ class PostController extends Controller
         //validate search
         $this->validate($request, array('query' => 'max:255'));
 
+        //create variable and store top 6 blogs by view count
+        $trending = Post::orderBy('view_count','desc')->take(4)->get();
 
-
-        //create variable and find related blog posts
+        //create variable for input query
         $query = $request->get('query');
 
         //avoid error message when search bar is empty
@@ -154,14 +168,14 @@ class PostController extends Controller
             $posts = Post::orderBy('id','desc')->simplePaginate(3);
 
             //return view and pass in variable
-            return view('posts.index')->withPosts($posts);
+            return view('posts.index')->withPosts($posts)->withTrending($trending);
         }
         $posts = Post::where('title', 'LIKE', '%'.$query.'%')
             ->orWhere('body', 'LIKE', '%'.$query.'%')
             ->orderBy('id', 'desc')->simplePaginate(3);
 
         //return view and pass in variable
-        return view('posts.search')->withPosts($posts);
+        return view('posts.search')->withPosts($posts)->withTrending($trending);
 
     }
 

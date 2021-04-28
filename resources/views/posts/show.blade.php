@@ -22,7 +22,12 @@
                 <h3 class="card-header">Post Details</h3>
                 <div class="card-body">
                     <p>Written by: {{ $post->user_name}}</p>
-                    <p>Category: {{ $post->category->name }}</p>
+{{--                    Category can be blank, so if no category was set on create, will not error--}}
+                    @if (isset($post->category->name))
+                        <p>Category: {{ $post->category->name }}</p>
+                    @else
+                        <p>Category: Other</p>
+                    @endif
                     <p>Posted on: {{ date('M j, Y h:ia', strtotime($post->created_at)) }}</p>
                     <p>Last Updated on: {{ date('M j, Y h:ia', strtotime($post->updated_at)) }}</p>
                     <div class="row">
@@ -36,6 +41,7 @@
                                 {!! Form::submit('Delete', array('class' => 'btn btn-danger btn-block')) !!}
                                 {!! Form::close() !!}
                             </div>
+{{--                            Moderator can delete posts, even if not the author of post--}}
                         @elseif(Auth::id() == '4')
                             <div class="col-sm-6">
                                 {!! Form::open(array('route' => array('posts.destroy', $post->id), 'method' => 'DELETE')) !!}

@@ -65,12 +65,11 @@
                         <div class="card-body">
                             <h4 class="card-title">Rhys Khan</h4>
                             <p class="lead">Host</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.</p>
+                            <p>My name is Rhys. I am interested in how people make deep connections with each through learning - mostly online. I design and create online learning tools and communities. I am also interested in how people make deep connections through food (but that's for another time). In 2009 I founded Peer 2 Peer University with 4 friends, when we realized that it was possible to learn anything online, if you had a few friends to learn with (and really hard without the friends).
+
+                                I've lived on three continents and travelled on 5. I moved to Boston from Cape Town and am now happily based at the MIT Media Lab, but my dad's family is from southern Hungary and you never know when my Gypsie roots will call again.
+
+                                I have a weakness for old cars and believe the perfect number of old cars to own is N+1, where N is the number of old cars you currently own. I currently own a 1967 Mercedes that is standing in a garage in Germany and which I haven't driven for 15 years.</p>
                         </div>
                     </div>
                 </div>
@@ -82,12 +81,13 @@
                         <div class="card-body">
                             <h4 class="card-title">James Thomas</h4>
                             <p class="lead">Host</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.</p>
+                            <p>Hi my name is James, I am a "graduate" of the first LCL course. Like all great learning it changed and transformed me and I feel it will do the same for all of you.
+
+                                I have been asked to be a part of the second "journey" by the LCL team, to help in online discussions and give support in whatever way I can. I am very happy to do this and know that I will learn so much more from you all in the weeks ahead.
+
+                                As a brief introduction to myself, I am a retired teacher, headteacher and Primary Mathematics Consultant living in the U.K. I regularly blog about "lifelong learning" and have a real interest in the the importance of recent developments in neuroscience and technology to transform education from where it currently lies in the past to where it us capable of getting to.
+
+                                I look forward to our online discussions and wish you well in your future growth.</p>
                         </div>
                     </div>
                 </div>
